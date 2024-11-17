@@ -77,8 +77,6 @@ cd ~/.local/zookeeper/bin
 파일명: `start_kafka_broker.sh` (by. 진헌님)
 
 ```bash
-bash
-코드 복사
 #!/bin/bash
 
 KAFKA_HOME=/home/$USER/.local/kafka
