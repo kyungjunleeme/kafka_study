@@ -52,5 +52,10 @@ https://www.yes24.com/Product/Goods/118397432
 - https://issues.apache.org/jira/projects/KAFKA/issues
 - https://lists.apache.org/list.html?dev@kafka.apache.org
 
+# KIP
+- https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals
+
+
+
 # 자바 코드 검색
 https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html
