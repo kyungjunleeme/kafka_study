@@ -46,4 +46,4 @@ https://www.yes24.com/Product/Goods/118397432
 
 # 교재
 - https://www.yes24.com/Product/Goods/118397432
-
+- https://dongjinleekr.github.io/kafka-the-definitive-guide-v2/
