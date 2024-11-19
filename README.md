@@ -49,6 +49,7 @@ https://www.yes24.com/Product/Goods/118397432
 - https://dongjinleekr.github.io/kafka-the-definitive-guide-v2/
 
 # apache mailing list
+- https://issues.apache.org/jira/projects/KAFKA/issues
 - https://lists.apache.org/list.html?dev@kafka.apache.org
 
 # 자바 코드 검색
