@@ -168,3 +168,7 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 \
 
 echo "Kafka Topic $TOPIC_NAME created successfully"
 ```
+
+
+24.11.23 - 경준 추가
+https://www.sktenterprise.com/bizInsight/blogDetail/dev/13040
