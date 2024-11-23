@@ -3,7 +3,7 @@
 
 https://www.yes24.com/Product/Goods/118397432
 
-# 멤버 
+### 멤버 
 
 <table>
   <tr>
@@ -44,25 +44,25 @@ https://www.yes24.com/Product/Goods/118397432
 </table>
 
 
-# 교재
+### 교재
 - https://www.yes24.com/Product/Goods/118397432
 - https://dongjinleekr.github.io/kafka-the-definitive-guide-v2/
 
-# apache mailing list
+### apache mailing list
 - https://issues.apache.org/jira/projects/KAFKA/issues
 - https://lists.apache.org/list.html?dev@kafka.apache.org
 
-# KIP
+### KIP
 - https://cwiki.apache.org/confluence/display/KAFKA/Kafka+Improvement+Proposals
 
 
-# 자바 코드 검색
+### 자바 코드 검색
 https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/ConsumerPartitionAssignor.html
 
-# 동작을 이해하기 위해 참고하면 좋은 파이썬 테스트 코드들
+### 동작을 이해하기 위해 참고하면 좋은 파이썬 테스트 코드들
 - https://github.com/apache/kafka/blob/trunk/tests/kafkatest/tests/streams/streams_broker_compatibility_test.py  # kafka
 - https://github.com/dpkp/kafka-python/blob/master/test/test_consumer.py  # kafka-python
 
 
-# 후원
+### 후원
 - https://okky.kr/  # 음료비 지원 및 개발 생태계 활성화
