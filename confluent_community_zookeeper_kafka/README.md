@@ -7,6 +7,12 @@ https://github.com/confluentinc/cp-all-in-one
 ```shell
 export CONFLUENT_VERSION=7.7.1
 echo $CONFLUENT_VERSION
+
+# up
+docker compose up -d
+
+# down
+docker compose down
 ```
 
 https://github.com/tchiotludo/akhq
@@ -15,3 +21,5 @@ https://github.com/tchiotludo/akhq
 /Users/kyungjunlee/git_project/personal/kafka_study/confluent_community_zookeeper_kafka
 - 아직 테스트 중입니다.
 - java 개발자분 gradle 지원 부탁드립니다.
+
+cf) https://devocean.sk.com/blog/techBoardDetail.do?ID=164016
