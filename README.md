@@ -51,6 +51,10 @@ https://www.yes24.com/Product/Goods/118397432
 ### Confluent Document
 - https://docs.confluent.io/kafka/overview.html
 
+### 카프카 활용 사례
+- https://techblog.woowahan.com/17386/?fbclid=IwY2xjawGvWTtleHRuA2FlbQIxMQABHT7cUG57I0xphRt_-GJkb91oFgCc0vgX_DuyM6fpXthHzve9-Gs2T_0xeg_aem_BIbRnX4qZ80ybfnqHDQ07w
+- 
+
 
 ### apache mailing list
 - https://issues.apache.org/jira/projects/KAFKA/issues
@@ -66,7 +70,10 @@ https://kafka.apache.org/39/javadoc/org/apache/kafka/clients/consumer/ConsumerPa
 ### 동작을 이해하기 위해 참고하면 좋은 파이썬 테스트 코드들
 - https://github.com/apache/kafka/blob/trunk/tests/kafkatest/tests/streams/streams_broker_compatibility_test.py  # kafka
 - https://github.com/dpkp/kafka-python/blob/master/test/test_consumer.py  # kafka-python
+- https://cwiki.apache.org/confluence/display/KAFKA/tutorial+-+set+up+and+run+Kafka+system+tests+with+ducktape  # 유투브 영상 볼수 없으나, ducktape라는 라이브러리 확인 필요
 
+###
+- 모니터링 도구 비교(https://devocean.sk.com/blog/techBoardDetail.do?ID=163980)
 
 ### 후원
 - https://okky.kr/  # 음료비 지원 및 개발 생태계 활성화 기여
