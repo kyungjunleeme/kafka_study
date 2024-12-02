@@ -1,7 +1,6 @@
 
-해당 스터디는 24년 11월 12일을 첫 기점으로 평일반, 주말반을 운영하고 있습니다.
+해당 스터디는 24년 11월 12일을 첫 기점으로 평일반, 주말반을 운영하고 있습니다. (Since 2024.11.12 ~ current)
 
-https://www.yes24.com/Product/Goods/118397432
 
 ### 멤버 
 
@@ -36,12 +35,20 @@ https://www.yes24.com/Product/Goods/118397432
     <td align="center">
       <img src="https://avatars.githubusercontent.com/u/70940112?v=4" width="100px;" alt=""/><br /><sub><b>선종웅</b></sub>
     </td> 
-        <td align="center">
+    <td align="center">
       <img src="https://avatars.githubusercontent.com/u/37974827?v=4" width="100px;" alt=""/><br /><sub><b>윤진헌</b></sub>
-    </td> 
-  
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b>박창현</b></sub>
+    </td>
+    <td align="center" colspan="4">
+      <!-- 빈 칸으로 균형 맞춤 -->
+    </td>
   </tr>
 </table>
+
 
 
 ### 교재
@@ -53,7 +60,6 @@ https://www.yes24.com/Product/Goods/118397432
 
 ### 카프카 활용 사례
 - https://techblog.woowahan.com/17386/?fbclid=IwY2xjawGvWTtleHRuA2FlbQIxMQABHT7cUG57I0xphRt_-GJkb91oFgCc0vgX_DuyM6fpXthHzve9-Gs2T_0xeg_aem_BIbRnX4qZ80ybfnqHDQ07w
-- 
 
 
 ### apache mailing list
