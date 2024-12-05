@@ -45,3 +45,6 @@ https://kafka.apache.org/documentation/#brokerconfigs_log.dir
 
 cf) akhq 보충
 https://www.instaclustr.com/blog/how-to-use-akhq-with-instaclustr-for-apache-kafka/
+
+cf) to live stream a container's runtime metrics.
+https://docs.docker.com/engine/containers/runmetrics/#docker-stats

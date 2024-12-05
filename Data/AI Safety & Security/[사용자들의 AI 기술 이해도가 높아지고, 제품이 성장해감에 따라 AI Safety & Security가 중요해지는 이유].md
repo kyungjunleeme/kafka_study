@@ -1,0 +1,2 @@
+
+https://www.linkedin.com/posts/huffonism_%EC%82%AC%EC%9A%A9%EC%9E%90%EB%93%A4%EC%9D%98-ai-%EA%B8%B0%EC%88%A0-%EC%9D%B4%ED%95%B4%EB%8F%84%EA%B0%80-%EB%86%92%EC%95%84%EC%A7%80%EA%B3%A0-%EC%A0%9C%ED%92%88%EC%9D%B4-%EC%84%B1%EC%9E%A5%ED%95%B4%EA%B0%90%EC%97%90-%EB%94%B0%EB%9D%BC-ai-safety-activity-7269867905591189505-kTOE?utm_source=share&utm_medium=member_desktop
