@@ -4,51 +4,58 @@
 
 ### 멤버 
 
-<table>
+<table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
+  <!-- DE -->
   <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/45473846?v=4" width="100px;" alt=""/><br /><sub><b>이경준</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/122958854?v=4" width="100px;" alt=""/><br /><sub><b>강주형</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/76575966?v=4" width="100px;" alt=""/><br /><sub><b>신민진</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/70463212?v=4" width="100px;" alt=""/><br /><sub><b>신준영</b></sub>
-    </td>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/81090215?v=4" width="100px;" alt=""/><br /><sub><b>구본연</b></sub>
-    </td>  
+    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Data Engineer</th>
   </tr>
   <tr>
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/101075173?v=4" width="100px;" alt=""/><br /><sub><b>김서령</b></sub>
-    </td>    
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/37677446?v=4" width="100px;" alt=""/><br /><sub><b>정세종</b></sub>
-    </td> 
-    <td align="center">
-      <img src="https://avatars.githubusercontent.com/u/165174659?v=4" width="100px;" alt=""/><br /><sub><b>이가은</b></sub>
+    <td align="center" style="padding: 10px; width: 25%;">
+      <img src="https://avatars.githubusercontent.com/u/45473846?v=4" width="100px;" alt=""/><br /><sub><b>이경준</b></sub>
     </td>
-    <td align="center">
+    <td align="center" style="padding: 10px; width: 25%;">
+      <img src="https://avatars.githubusercontent.com/u/101075173?v=4" width="100px;" alt=""/><br /><sub><b>김서령</b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 25%;">
       <img src="https://avatars.githubusercontent.com/u/70940112?v=4" width="100px;" alt=""/><br /><sub><b>선종웅</b></sub>
-    </td> 
-    <td align="center">
+    </td>
+    <td align="center" style="padding: 10px; width: 25%;">
       <img src="https://avatars.githubusercontent.com/u/37974827?v=4" width="100px;" alt=""/><br /><sub><b>윤진헌</b></sub>
     </td>
   </tr>
+
+  <!-- BE -->
   <tr>
-    <td align="center">
+    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Backend Engineer</th>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/76575966?v=4" width="100px;" alt=""/><br /><sub><b>신민진</b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/70463212?v=4" width="100px;" alt=""/><br /><sub><b>신준영</b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/81090215?v=4" width="100px;" alt=""/><br /><sub><b>구본연</b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/165174659?v=4" width="100px;" alt=""/><br /><sub><b>이가은</b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 20%;">
       <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b>박창현</b></sub>
     </td>
-    <td align="center" colspan="4">
-      <!-- 빈 칸으로 균형 맞춤 -->
+  </tr>
+
+  <!-- ML -->
+  <tr>
+    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Machine Learning Engineer</th>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; width: 100%;">
+      <img src="https://avatars.githubusercontent.com/u/37677446?v=4" width="100px;" alt=""/><br /><sub><b>정세종</b></sub>
     </td>
   </tr>
 </table>
-
 
 
 ### 교재
