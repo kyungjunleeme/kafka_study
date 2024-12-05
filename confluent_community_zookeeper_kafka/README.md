@@ -48,3 +48,6 @@ https://www.instaclustr.com/blog/how-to-use-akhq-with-instaclustr-for-apache-kaf
 
 cf) to live stream a container's runtime metrics.
 https://docs.docker.com/engine/containers/runmetrics/#docker-stats
+
+cf) Kafka Connect docker image
+https://devidea.tistory.com/120
