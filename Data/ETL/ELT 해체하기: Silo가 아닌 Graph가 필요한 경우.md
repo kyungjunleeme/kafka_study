@@ -1,0 +1,6 @@
+
+
+https://news.hada.io/topic?id=18109
+
+https://www.youtube.com/watch?v=4nZfTJzFAXc&t=179s
+
