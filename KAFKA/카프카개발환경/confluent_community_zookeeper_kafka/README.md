@@ -51,3 +51,5 @@ https://docs.docker.com/engine/containers/runmetrics/#docker-stats
 
 cf) Kafka Connect docker image
 https://devidea.tistory.com/120
+
+cf) https://github.com/Aiven-Open/karapace
