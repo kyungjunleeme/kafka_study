@@ -84,5 +84,8 @@
 - https://www.yes24.com/Product/Goods/118397432
 - https://dongjinleekr.github.io/kafka-the-definitive-guide-v2/
 
+### 부교재
+- https://www.yes24.com/Product/Goods/116979909
+
 ### 후원
 - https://okky.kr/  # 음료비 지원 및 개발 생태계 활성화 기여
