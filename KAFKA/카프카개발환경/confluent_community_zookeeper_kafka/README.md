@@ -53,3 +53,7 @@ cf) Kafka Connect docker image
 https://devidea.tistory.com/120
 
 cf) https://github.com/Aiven-Open/karapace
+
+
+
+https://github.com/conduktor/kafka-stack-docker-compose
