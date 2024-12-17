@@ -15,7 +15,7 @@
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <!-- DE -->
   <tr>
-    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Data Engineer</th>
+    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Data Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 25%;">
@@ -30,11 +30,14 @@
     <td align="center" style="padding: 10px; width: 25%;">
       <img src="https://avatars.githubusercontent.com/u/37974827?v=4" width="100px;" alt=""/><br /><sub><b>윤진헌</b></sub>
     </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b>박창현</b></sub>
+    </td>
   </tr>
 
   <!-- BE -->
   <tr>
-    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Backend Engineer</th>
+    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Backend Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 20%;">
@@ -50,13 +53,18 @@
       <img src="https://avatars.githubusercontent.com/u/165174659?v=4" width="100px;" alt=""/><br /><sub><b>이가은</b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b>박창현</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/125240595?v=4" width="100px;" alt=""/><br /><sub><b>김영현</b></sub>
     </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/103872338?v=4" width="100px;" alt=""/><br /><sub><b>김 란</b></sub>
+    </td>
+
+
   </tr>
 
   <!-- ML -->
   <tr>
-    <th colspan="5" align="center" style="background-color: #f0f0f0; padding: 10px;">Machine Learning Engineer</th>
+    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Machine Learning Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 100%;">
