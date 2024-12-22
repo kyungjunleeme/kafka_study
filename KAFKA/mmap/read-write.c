@@ -3,43 +3,62 @@
 #include <stdint.h>
 #include <fcntl.h>
 #include <sys/stat.h>
-#include <sys/mman.h>
 #include <unistd.h>
+
+#define BUFFER_SIZE 4096
 
 int main(int argc, char *argv[])
 {
-	char *filepath = "test.txt";
-	struct stat fileInfo;
-	int fd = -1;
+   char *input_filepath = "test.txt";
+   char *output_filepath = "output.txt";
+   struct stat fileInfo;
+   int input_fd = -1, output_fd = -1;
+   
+   // 입력 파일 열기
+   input_fd = open(input_filepath, O_RDONLY, (mode_t)0600);
+   if (input_fd < 0)
+   {
+       perror("error opening input file");
+       exit(EXIT_FAILURE);
+   }
 
-	fd = open(filepath, O_RDWR | O_CREAT, (mode_t)0600);
-	if (fd < 0)
-	{
-		exit(EXIT_FAILURE);
-	}
-	fstat(fd, &fileInfo);
-	printf("file size is %ld\n", (intmax_t)fileInfo.st_size);
-	char *map = mmap(0, fileInfo.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
-	if (map == MAP_FAILED)
-	{
-		close(fd);
-		perror("error mmapping the file");
-		exit(EXIT_FAILURE);
-	}
+   // 출력 파일 열기
+   output_fd = open(output_filepath, O_WRONLY | O_CREAT | O_TRUNC, (mode_t)0644);
+   if (output_fd < 0)
+   {
+       perror("error opening output file");
+       close(input_fd);
+       exit(EXIT_FAILURE);
+   }
 
-	for (size_t i = 0; i < 1000000 ; i++)
-	{
-		map[i] = '2';
-	}
-	if (msync(map, fileInfo.st_size, MS_SYNC) == -1)
-		perror("could not sync the file to disk");
+   fstat(input_fd, &fileInfo);
+   printf("file size is %ji\n", (intmax_t)fileInfo.st_size);
 
-	if (munmap(map, fileInfo.st_size) == -1)
-	{
-		close(fd);
-		perror("error un-mmapping the file");
-		exit(EXIT_FAILURE);
-	}
-	close(fd);
-	return (0);
+   char buffer[BUFFER_SIZE];
+   ssize_t bytes_read;
+
+   // Read from input file and write to output file
+   while ((bytes_read = read(input_fd, buffer, BUFFER_SIZE)) > 0)
+   {
+       ssize_t bytes_written = write(output_fd, buffer, bytes_read);
+       if (bytes_written < 0)
+       {
+           perror("error writing to file");
+           close(input_fd);
+           close(output_fd);
+           exit(EXIT_FAILURE);
+       }
+   }
+
+   if (bytes_read < 0)
+   {
+       perror("error reading the file");
+       close(input_fd);
+       close(output_fd);
+       exit(EXIT_FAILURE);
+   }
+
+   close(input_fd);
+   close(output_fd);
+   return (0);
 }
