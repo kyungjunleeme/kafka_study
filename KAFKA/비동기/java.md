@@ -6,8 +6,13 @@ https://11st-tech.github.io/2024/01/04/completablefuture/
   - spring kafka 에서 제공하는 KafkaFuture 추상 클래스도 존재하나, CompletableFuture 가 제공하는 기능이 더 많음
   - 
 
+자바 비동기 관련 좋은 글
+https://kth990303.tistory.com/464
 
 mointor lock 
+
+monitor
+https://bestugi.tistory.com/40
 
 lock 
 
@@ -15,9 +20,6 @@ asyncio vs threading
 
 https://stackoverflow.com/questions/1312259/what-is-the-re-entrant-lock-and-concept-in-general
 
-
-monitor
-https://bestugi.tistory.com/40
 
 
 ## 자바에서 비동기 사용 방법
@@ -134,3 +136,4 @@ public class AsyncService {
 - 콜백이 많다면: CompletableFuture
 - 데이터 스트림 기반: Reactor, RxJava
 - Spring 프로젝트: @Async
+

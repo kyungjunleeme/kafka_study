@@ -170,5 +170,6 @@ echo "Kafka Topic $TOPIC_NAME created successfully"
 ```
 
 
-24.11.23 - 경준 추가
-https://www.sktenterprise.com/bizInsight/blogDetail/dev/13040
+24.11.23 / 24.12.27 - 경준 추가
+- https://www.sktenterprise.com/bizInsight/blogDetail/dev/13040
+- https://blog.voidmainvoid.net/495
