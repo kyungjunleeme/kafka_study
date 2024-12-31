@@ -1,0 +1,1 @@
+- https://www.databricks.com/kr/glossary/star-schema
