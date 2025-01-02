@@ -55,9 +55,6 @@
     <td align="center" style="padding: 10px; width: 20%;">
       <img src="https://avatars.githubusercontent.com/u/125240595?v=4" width="100px;" alt=""/><br /><sub><b>김영현</b></sub>
     </td>
-    <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/103872338?v=4" width="100px;" alt=""/><br /><sub><b>김 란</b></sub>
-    </td>
 
 
   </tr>
@@ -86,6 +83,9 @@
     </td>
   </tr>
 </table>
+
+### 카프카 
+- https://www.codenary.co.kr/techstack/detail/kafka
 
 
 ### 교재
