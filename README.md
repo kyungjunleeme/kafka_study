@@ -15,57 +15,62 @@
 <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
   <!-- DE -->
   <tr>
-    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Data Engineer</th>
+    <th colspan="7" align="center" style="background-color: #f0f0f0; padding: 10px;">Data Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 25%;">
-      <img src="https://avatars.githubusercontent.com/u/45473846?v=4" width="100px;" alt=""/><br /><sub><b>이경준</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/45473846?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/kyungjunleeme">이경준</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 25%;">
-      <img src="https://avatars.githubusercontent.com/u/101075173?v=4" width="100px;" alt=""/><br /><sub><b>김서령</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/101075173?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/ryeong0418">김서령</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 25%;">
-      <img src="https://avatars.githubusercontent.com/u/70940112?v=4" width="100px;" alt=""/><br /><sub><b>선종웅</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/70940112?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/JONGWOONG-SEON">선종웅</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 25%;">
-      <img src="https://avatars.githubusercontent.com/u/37974827?v=4" width="100px;" alt=""/><br /><sub><b>윤진헌</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/37974827?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/yjinheon">윤진헌</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b>박창현</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/45930454?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/ParkChanghHyun">박창현</a></b></sub>
     </td>
   </tr>
 
   <!-- BE -->
   <tr>
-    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Backend Engineer</th>
+    <th colspan="7" align="center" style="background-color: #f0f0f0; padding: 10px;">Backend Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/76575966?v=4" width="100px;" alt=""/><br /><sub><b>신민진</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/76575966?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/Shinminjin">신민진</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/70463212?v=4" width="100px;" alt=""/><br /><sub><b>신준영</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/70463212?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/PunRabbit">신준영</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/81090215?v=4" width="100px;" alt=""/><br /><sub><b>구본연</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/81090215?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/bonyeon0605">구본연</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/165174659?v=4" width="100px;" alt=""/><br /><sub><b>이가은</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/165174659?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/dlrkdms125">이가은</a></b></sub>
     </td>
     <td align="center" style="padding: 10px; width: 20%;">
-      <img src="https://avatars.githubusercontent.com/u/125240595?v=4" width="100px;" alt=""/><br /><sub><b>김영현</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/125240595?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/Yhk7248">김영현</a></b></sub>
     </td>
-
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/55744163?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/chaeyeonhan1225">한채연</a></b></sub>
+    </td>
+    <td align="center" style="padding: 10px; width: 20%;">
+      <img src="https://avatars.githubusercontent.com/u/49539592?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/bky373">이보람</a></b></sub>
+    </td>
 
   </tr>
 
   <!-- ML -->
   <tr>
-    <th colspan="6" align="center" style="background-color: #f0f0f0; padding: 10px;">Machine Learning Engineer</th>
+    <th colspan="7" align="center" style="background-color: #f0f0f0; padding: 10px;">Machine Learning Engineer</th>
   </tr>
   <tr>
     <td align="center" style="padding: 10px; width: 100%;">
-      <img src="https://avatars.githubusercontent.com/u/37677446?v=4" width="100px;" alt=""/><br /><sub><b>정세종</b></sub>
+      <img src="https://avatars.githubusercontent.com/u/37677446?v=4" width="100px;" alt=""/><br /><sub><b><a href="https://github.com/sejongjeong">정세종</a></b></sub>
     </td>
   </tr>
 </table>
