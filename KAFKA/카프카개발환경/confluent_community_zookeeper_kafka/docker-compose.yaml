@@ -26,10 +26,10 @@ services:
 
   zookeeper-1:
     image: confluentinc/cp-zookeeper:latest
-#    volumes:
-#      - zookeeper-data-1:/var/lib/zookeeper/data
-#      - zookeeper-log-1:/var/lib/zookeeper/log
-#      - zookeeper-secrets-1:/etc/zookeeper/secrets
+    volumes:
+      - zookeeper-data-1:/var/lib/zookeeper/data
+      - zookeeper-log-1:/var/lib/zookeeper/log
+      - zookeeper-secrets-1:/etc/zookeeper/secrets
     environment:
       ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -41,10 +41,10 @@ services:
 
   zookeeper-2:
     image: confluentinc/cp-zookeeper:latest
-#    volumes:
-#      - zookeeper-data-2:/var/lib/zookeeper/data
-#      - zookeeper-log-2:/var/lib/zookeeper/log
-#      - zookeeper-secrets-2:/etc/zookeeper/secrets
+    volumes:
+      - zookeeper-data-2:/var/lib/zookeeper/data
+      - zookeeper-log-2:/var/lib/zookeeper/log
+      - zookeeper-secrets-2:/etc/zookeeper/secrets
     environment:
       ZOOKEEPER_SERVER_ID: 2
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -56,10 +56,10 @@ services:
 
   zookeeper-3:
     image: confluentinc/cp-zookeeper:latest
-#    volumes:
-#      - zookeeper-data-3:/var/lib/zookeeper/data
-#      - zookeeper-log-3:/var/lib/zookeeper/log
-#      - zookeeper-secrets-3:/etc/zookeeper/secrets
+    volumes:
+      - zookeeper-data-3:/var/lib/zookeeper/data
+      - zookeeper-log-3:/var/lib/zookeeper/log
+      - zookeeper-secrets-3:/etc/zookeeper/secrets
     environment:
       ZOOKEEPER_SERVER_ID: 3
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -77,9 +77,9 @@ services:
       - zookeeper-3
     ports:
       - 29092:29092
-#    volumes:
-#      - kafka-data-1:/var/lib/kafka/data
-#      - kafka-secrets-1:/etc/kafka/secrets
+    volumes:
+      - kafka-data-1:/var/lib/kafka/data
+      - kafka-secrets-1:/etc/kafka/secrets
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
@@ -98,9 +98,9 @@ services:
       - zookeeper-3
     ports:
       - "39092:39092"
-#    volumes:
-#      - kafka-data-2:/var/lib/kafka/data
-#      - kafka-secrets-2:/etc/kafka/secrets
+    volumes:
+      - kafka-data-2:/var/lib/kafka/data
+      - kafka-secrets-2:/etc/kafka/secrets
     environment:
       KAFKA_BROKER_ID: 2
       KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
@@ -116,9 +116,9 @@ services:
       - zookeeper-1
       - zookeeper-2
       - zookeeper-3
-#    volumes:
-#      - kafka-data-3:/var/lib/kafka/data
-#      - kafka-secrets-3:/etc/kafka/secrets
+    volumes:
+      - kafka-data-3:/var/lib/kafka/data
+      - kafka-secrets-3:/etc/kafka/secrets
     ports:
       - "49092:49092"
     environment:
@@ -145,20 +145,20 @@ services:
 #      timeout: 5s
 #      retries: 5
 
-#volumes:
-#  zookeeper-data-1: {}
-#  zookeeper-log-1: {}
-#  zookeeper-secrets-1: {}
-#  kafka-data-1: {}
-#  kafka-secrets-1: {}
-#  zookeeper-data-2: {}
-#  zookeeper-log-2: {}
-#  zookeeper-secrets-2: {}
-#  kafka-data-2: {}
-#  kafka-secrets-2: {}
-#  zookeeper-data-3: {}
-#  zookeeper-log-3: {}
-#  zookeeper-secrets-3: {}
-#  kafka-data-3: {}
-#  kafka-secrets-3: {}
+volumes:
+  zookeeper-data-1: {}
+  zookeeper-log-1: {}
+  zookeeper-secrets-1: {}
+  kafka-data-1: {}
+  kafka-secrets-1: {}
+  zookeeper-data-2: {}
+  zookeeper-log-2: {}
+  zookeeper-secrets-2: {}
+  kafka-data-2: {}
+  kafka-secrets-2: {}
+  zookeeper-data-3: {}
+  zookeeper-log-3: {}
+  zookeeper-secrets-3: {}
+  kafka-data-3: {}
+  kafka-secrets-3: {}
 
