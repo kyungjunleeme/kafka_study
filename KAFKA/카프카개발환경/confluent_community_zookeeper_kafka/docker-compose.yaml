@@ -9,23 +9,23 @@ services:
             docker-kafka-server-1:
               properties:
                 bootstrap.servers: "kafka-1:9092"
-            docker-kafka-server-2:
-              properties:
-                bootstrap.servers: "kafka-2:9092"
-            docker-kafka-server-3:
-              properties:
-                bootstrap.servers: "kafka-3:9092"
+#            docker-kafka-server-2:
+#              properties:
+#                bootstrap.servers: "kafka-2:9092"
+#            docker-kafka-server-3:
+#              properties:
+#                bootstrap.servers: "kafka-3:9092"
 
     ports:
       - "8080:8080"
     depends_on:
       - kafka-1
-      - kafka-2
-      - kafka-3
-#      - schema-registry
+#      - kafka-2
+#      - kafka-3
+      - schema-registry
 
   zookeeper-1:
-    image: confluentinc/cp-zookeeper:latest
+    image: confluentinc/cp-zookeeper:7.8.0
     volumes:
       - zookeeper-data-1:/var/lib/zookeeper/data
       - zookeeper-log-1:/var/lib/zookeeper/log
@@ -39,50 +39,50 @@ services:
     ports:
       - "22181:2181"
 
-  zookeeper-2:
-    image: confluentinc/cp-zookeeper:latest
-    volumes:
-      - zookeeper-data-2:/var/lib/zookeeper/data
-      - zookeeper-log-2:/var/lib/zookeeper/log
-      - zookeeper-secrets-2:/etc/zookeeper/secrets
-    environment:
-      ZOOKEEPER_SERVER_ID: 2
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_INIT_LIMIT: 5
-      ZOOKEEPER_SYNC_LIMIT: 2
-    ports:
-      - "32181:2181"
-
-  zookeeper-3:
-    image: confluentinc/cp-zookeeper:latest
-    volumes:
-      - zookeeper-data-3:/var/lib/zookeeper/data
-      - zookeeper-log-3:/var/lib/zookeeper/log
-      - zookeeper-secrets-3:/etc/zookeeper/secrets
-    environment:
-      ZOOKEEPER_SERVER_ID: 3
-      ZOOKEEPER_CLIENT_PORT: 2181
-      ZOOKEEPER_TICK_TIME: 2000
-      ZOOKEEPER_INIT_LIMIT: 5
-      ZOOKEEPER_SYNC_LIMIT: 2
-    ports:
-      - "42181:2181"
+#  zookeeper-2:
+#    image: confluentinc/cp-zookeeper:7.8.0
+#    volumes:
+#      - zookeeper-data-2:/var/lib/zookeeper/data
+#      - zookeeper-log-2:/var/lib/zookeeper/log
+#      - zookeeper-secrets-2:/etc/zookeeper/secrets
+#    environment:
+#      ZOOKEEPER_SERVER_ID: 2
+#      ZOOKEEPER_CLIENT_PORT: 2181
+#      ZOOKEEPER_TICK_TIME: 2000
+#      ZOOKEEPER_INIT_LIMIT: 5
+#      ZOOKEEPER_SYNC_LIMIT: 2
+#    ports:
+#      - "32181:2181"
+#
+#  zookeeper-3:
+#    image: confluentinc/cp-zookeeper:7.8.0
+#    volumes:
+#      - zookeeper-data-3:/var/lib/zookeeper/data
+#      - zookeeper-log-3:/var/lib/zookeeper/log
+#      - zookeeper-secrets-3:/etc/zookeeper/secrets
+#    environment:
+#      ZOOKEEPER_SERVER_ID: 3
+#      ZOOKEEPER_CLIENT_PORT: 2181
+#      ZOOKEEPER_TICK_TIME: 2000
+#      ZOOKEEPER_INIT_LIMIT: 5
+#      ZOOKEEPER_SYNC_LIMIT: 2
+#    ports:
+#      - "42181:2181"
 
   kafka-1:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:7.8.0
     depends_on:
       - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
+#      - zookeeper-2
+#      - zookeeper-3
     ports:
-      - 29092:29092
+      - "29092:29092"
     volumes:
       - kafka-data-1:/var/lib/kafka/data
       - kafka-secrets-1:/etc/kafka/secrets
     environment:
       KAFKA_BROKER_ID: 1
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-1:9092,PLAINTEXT_HOST://localhost:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
@@ -90,60 +90,63 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       #KAFKA_LOG_RETENTION_HOURS: 72  #
 
-  kafka-2:
-    image: confluentinc/cp-kafka:latest
-    depends_on:
-      - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
-    ports:
-      - "39092:39092"
-    volumes:
-      - kafka-data-2:/var/lib/kafka/data
-      - kafka-secrets-2:/etc/kafka/secrets
-    environment:
-      KAFKA_BROKER_ID: 2
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-2:9092,PLAINTEXT_HOST://localhost:39092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-
-  kafka-3:
-    image: confluentinc/cp-kafka:latest
-    depends_on:
-      - zookeeper-1
-      - zookeeper-2
-      - zookeeper-3
-    volumes:
-      - kafka-data-3:/var/lib/kafka/data
-      - kafka-secrets-3:/etc/kafka/secrets
-    ports:
-      - "49092:49092"
-    environment:
-      KAFKA_BROKER_ID: 3
-      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-3:9092,PLAINTEXT_HOST://localhost:49092
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-
-#  schema-registry:
-#    image: confluentinc/cp-schema-registry:latest
-#    restart: unless-stopped
+#  kafka-2:
+#    image: confluentinc/cp-kafka:7.8.0
+#    depends_on:
+#      - zookeeper-1
+#      - zookeeper-2
+#      - zookeeper-3
 #    ports:
-#      - "8085:8085"
+#      - "39092:39092"
+#    volumes:
+#      - kafka-data-2:/var/lib/kafka/data
+#      - kafka-secrets-2:/etc/kafka/secrets
 #    environment:
-#      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "PLAINTEXT://kafka:9092"
-#      SCHEMA_REGISTRY_HOST_NAME: "schema-registry"
-#      SCHEMA_REGISTRY_LISTENERS: "http://0.0.0.0:8085"
-#    healthcheck:
-#      test: ["CMD", "curl", "-f", "http://localhost:8085"]
-#      interval: 10s
-#      timeout: 5s
-#      retries: 5
+#      KAFKA_BROKER_ID: 2
+#      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
+#      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-2:9092,PLAINTEXT_HOST://localhost:39092
+#      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+#      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+#      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+#      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+#  kafka-3:
+#    image: confluentinc/cp-kafka:7.8.0
+#    depends_on:
+#      - zookeeper-1
+#      - zookeeper-2
+#      - zookeeper-3
+#    volumes:
+#      - kafka-data-3:/var/lib/kafka/data
+#      - kafka-secrets-3:/etc/kafka/secrets
+#    ports:
+#      - "49092:49092"
+#    environment:
+#      KAFKA_BROKER_ID: 3
+#      KAFKA_ZOOKEEPER_CONNECT: zookeeper-1:2181,zookeeper-2:2181,zookeeper-3:2181
+#      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-3:9092,PLAINTEXT_HOST://localhost:49092
+#      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+#      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+#      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+#      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+
+  schema-registry:
+    image: confluentinc/cp-schema-registry:7.0.5
+    restart: unless-stopped
+    volumes:
+      - schema-registry:/etc/schema-registry/secrets
+    ports:
+      - "8085:8085"
+    environment:
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: "PLAINTEXT://kafka-1:9092,PLAINTEXT://kafka-2:9092,PLAINTEXT://kafka-3:9092"
+      SCHEMA_REGISTRY_HOST_NAME: "schema-registry"
+      SCHEMA_REGISTRY_LISTENERS: "http://0.0.0.0:8085"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8085"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   zookeeper-data-1: {}
@@ -151,14 +154,15 @@ volumes:
   zookeeper-secrets-1: {}
   kafka-data-1: {}
   kafka-secrets-1: {}
-  zookeeper-data-2: {}
-  zookeeper-log-2: {}
-  zookeeper-secrets-2: {}
-  kafka-data-2: {}
-  kafka-secrets-2: {}
-  zookeeper-data-3: {}
-  zookeeper-log-3: {}
-  zookeeper-secrets-3: {}
-  kafka-data-3: {}
-  kafka-secrets-3: {}
+#  zookeeper-data-2: {}
+#  zookeeper-log-2: {}
+#  zookeeper-secrets-2: {}
+#  kafka-data-2: {}
+#  kafka-secrets-2: {}
+#  zookeeper-data-3: {}
+#  zookeeper-log-3: {}
+#  zookeeper-secrets-3: {}
+#  kafka-data-3: {}
+#  kafka-secrets-3: {}
+  schema-registry: {}
 
