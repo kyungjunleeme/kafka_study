@@ -10,7 +10,7 @@ import org.apache.kafka.clients.producer.ProducerRecord;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import org.junit.After;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -27,6 +27,17 @@ public class NetworkFailureTest {
         System.out.println(proxy);
     }
 
+    public void tearDown() throws Exception {
+        // 테스트 후 프록시 연결 정리
+        if (proxy != null) {
+            // 모든 toxic 제거
+            for (Toxic toxic : proxy.toxics().getAll()) {
+                toxic.remove();
+            }
+            // 프록시 삭제
+            proxy.delete();
+        }
+    }
     /**
      *  toxiproxy 통해서 데이터송신 성공
      * @throws Exception
@@ -143,16 +154,16 @@ public class NetworkFailureTest {
                             .setLatency(30000)     // 6초 지연
                             .setJitter(100);
                     // ACK
-//                    Toxic atencyToxic2 = proxy.toxics()
-//                            .latency("latency-toxic2", ToxicDirection.DOWNSTREAM, 0)
-//                            .setLatency(30000)     // 6초 지연
-//                            .setJitter(100);
+                    Toxic atencyToxic2 = proxy.toxics()
+                            .latency("latency-toxic2", ToxicDirection.DOWNSTREAM, 0)
+                            .setLatency(30000)     // 6초 지연
+                            .setJitter(100);
 
                     // 첫 번째 메시지 전송 테스트
                     System.out.println("begin");
 
                     for (int i = 0; i < 5; i++) {
-                        producer.send(new ProducerRecord<>("topic4", "key" + i, "value" + i))
+                        producer.send(new ProducerRecord<>("topic1", "key" + i, "value" + i))
 //                                .get(2, TimeUnit.SECONDS); // 2초 timeout으로 get
                         .get(200, TimeUnit.MILLISECONDS);
                         System.out.println("Sent message " + i);
@@ -163,7 +174,7 @@ public class NetworkFailureTest {
                 } catch (Exception e) {
                     System.out.println("Expected failure occurred: " + e);
                     producer.abortTransaction();
-//                    throw e;
+                    throw e;
                 } finally {
                     latencyToxic.remove();
 

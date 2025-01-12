@@ -78,8 +78,8 @@ public class TimeOutTest extends TestCase {
          * 기본값: 60000 (60초)
          */
         props.put(ProducerConfig.MAX_BLOCK_MS_CONFIG, "10");       // 1ms
-
-        try (KafkaProducer<String, String> producer = new KafkaProducer<>(props)) {
+        KafkaProducer<String, String> producer = new KafkaProducer<>(props);
+        try {
             producer.initTransactions();
             producer.beginTransaction();
 
@@ -100,6 +100,10 @@ public class TimeOutTest extends TestCase {
             producer.commitTransaction();
         } catch (TimeoutException e) {
             System.out.println("Timeout occurred as expected");
+            producer.abortTransaction();
+	    throw e;
+        } finally {
+            producer.close();
         }
     }
 
