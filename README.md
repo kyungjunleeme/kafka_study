@@ -110,5 +110,8 @@
 - https://www.youtube.com/watch?v=0Jd3uBZQJt4
 
 
+### kafka contributer
+- https://kafka.apache.org/contributing.html
+
 ### 후원
 - https://okky.kr/  # 음료비 지원 및 개발 생태계 활성화 기여
