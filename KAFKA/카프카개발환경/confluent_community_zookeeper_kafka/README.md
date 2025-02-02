@@ -2,6 +2,8 @@
 m2 max 기준  # window 사용자는 죄송합니다. 알아서.....ㅜ
 https://github.com/confluentinc/cp-all-in-one
 
+# 멀티 노드 셋업
+- https://zookeeper.apache.org/doc/r3.4.10/zookeeperAdmin.html#sc_zkMulitServerSetup
 
 ```shell
 export CONFLUENT_VERSION=7.7.1
@@ -57,3 +59,5 @@ cf) https://github.com/Aiven-Open/karapace
 
 
 https://github.com/conduktor/kafka-stack-docker-compose
+
+
