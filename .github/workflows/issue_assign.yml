@@ -14,24 +14,17 @@ jobs:
       - name: 'Get repository collaborators'
         id: get-collaborators
         run: |
-          # 저장소의 Collaborators 가져오기
-          COLLABORATORS=$(gh api repos/${{ github.repository }}/collaborators --jq 'map(.login)')
-          
-          # Collaborators에서 2명을 랜덤 선택 후 쉼표(,)로 구분
-          SELECTED_ASSIGNEES=$(echo "$COLLABORATORS" | jq -r 'shuffle | .[:2] | join(",")' | tr -d '\n')
-
-          # Assignees 환경 변수 저장
-          echo "ASSIGNEES=${SELECTED_ASSIGNEES}" >> $GITHUB_ENV
+          COLLABORATORS=$(gh api repos/${{ github.repository }}/collaborators --jq 'map(.login) | join(" ")')
+          echo "COLLABORATORS=${COLLABORATORS}" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: 'Check Selected Assignees'
-        run: |
-          printf "Selected Assignees: '%s'\n" "${{ env.ASSIGNEES }}"
+      - name: 'Check COLLABORATORS Value'
+        run: echo "COLLABORATORS=${{ env.COLLABORATORS }}"
 
       - name: 'Auto-assign Issue'
         uses: pozil/auto-assign-issue@v2
         with:
-          assignees: ${{ env.ASSIGNEES }}
+          assignees: ${{ env.COLLABORATORS }}
           numOfAssignee: 2
           allowSelfAssign: false
