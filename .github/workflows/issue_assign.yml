@@ -14,7 +14,7 @@ jobs:
       - name: 'Get repository collaborators'
         id: get-collaborators
         run: |
-          COLLABORATORS=$(gh api repos/${{ github.repository }}/collaborators --jq 'map(.login) | join(" ")')
+          COLLABORATORS=$(gh api repos/${{ github.repository }}/collaborators --jq 'map(.login) | join(", ")')
           echo "COLLABORATORS=${COLLABORATORS}" >> $GITHUB_ENV
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
