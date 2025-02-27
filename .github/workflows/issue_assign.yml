@@ -23,7 +23,7 @@ jobs:
         run: echo "COLLABORATORS=${{ env.COLLABORATORS }}"
 
       - name: 'Auto-assign Issue'
-        uses: pozil/auto-assign-issue@v2
+        uses: pozil/auto-assign-issue@v2.2.0
         with:
           assignees: ${{ env.COLLABORATORS }}
           numOfAssignee: 2
